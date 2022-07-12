@@ -8,10 +8,12 @@ const SideBar = () => {
 
   const dispatch=useDispatch()
 
+  // Fucntion for handling Add button click
   const handleAdd=()=>{
     dispatch(add())
   }
 
+  // Function for handling update button click
   const handleUpdate=()=>{
     dispatch(update())
   }

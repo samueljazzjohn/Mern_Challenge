@@ -8,6 +8,7 @@ import './style.css';
 function App() {
   return (
     <div className="App-container">
+      {/* Implementing split screen */}
       <Split direction='vertical' sizes={[70, 30]}  style={{ height: "100%"}}>
           <Split className='flex' sizes={[20, 80]} gutterAlign="center" style={{ width: "100%"}}>
             <SideBar />

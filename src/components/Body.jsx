@@ -21,6 +21,7 @@ const Body = () => {
 
   const { register, handleSubmit, formState: { errors },reset } = useForm()
 
+  // Clearing the data when clicking the data button
   useEffect(() => {
     reset({code:"",name:"",phone:""})
   }, [addClicked])
@@ -28,6 +29,7 @@ const Body = () => {
 
   const onSubmit = (data) => {
     if(add){
+      // Adding data to the database
       axios.post('https://mern-challenge-api.herokuapp.com/add_data',data).then((res)=>{
         dispatch(count())
         toast.success('Successfully added')
@@ -36,6 +38,7 @@ const Body = () => {
         console.log(err.response.data.Message)
       })
     }else{
+      // Updating data in the database
       axios.patch('https://mern-challenge-api.herokuapp.com/update_data',data).then((res)=>{
         toast.success('Successfully updated')
         console.log("Success")
