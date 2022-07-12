@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit'
 import counterSlice from './features/counterSlice';
+import onClickedSlice from './features/onClickedSlice';
 
 const store = configureStore({
     reducer : {
-        counter:counterSlice
+        counter:counterSlice,
+        onClick:onClickedSlice
     },
 })
 
