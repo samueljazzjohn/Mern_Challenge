@@ -28,7 +28,7 @@ const Body = () => {
 
   const onSubmit = (data) => {
     if(add){
-      axios.post('http://localhost:4000/add_data',data).then((res)=>{
+      axios.post('https://mern-challenge-api.herokuapp.com/add_data',data).then((res)=>{
         dispatch(count())
         toast.success('Successfully added')
       }).catch((err)=>{
@@ -36,7 +36,7 @@ const Body = () => {
         console.log(err.response.data.Message)
       })
     }else{
-      axios.patch('http://localhost:4000/update_data',data).then((res)=>{
+      axios.patch('https://mern-challenge-api.herokuapp.com/update_data',data).then((res)=>{
         toast.success('Successfully updated')
         console.log("Success")
       }).catch((err)=>{
